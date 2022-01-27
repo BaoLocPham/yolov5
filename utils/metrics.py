@@ -83,7 +83,7 @@ def ap_per_class(tp, conf, pred_cls, target_cls, plot=False, save_dir='.', names
     p, r, f2 = p[:, i], r[:, i], f2[:, i]
     tp = (r * nt).round()  # true positives
     fp = (tp / (p + eps) - tp).round()  # false positives
-    return tp, fp, p, r, f2, ap, unique_classes.astype("int32"
+    return tp, fp, p, r, f2, ap, unique_classes.astype("int32")
 
 
 def compute_ap(recall, precision):
